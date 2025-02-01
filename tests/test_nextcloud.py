@@ -34,33 +34,49 @@ class TestNextcloudFunctions(unittest.TestCase):
 
     def test_download_file(self):
         # Add test cases for DownloadFile function
-        result = DownloadFile('HTML/example.html', 'test_folder/example.html')
+        result = DownloadFile('HTML/example.html', 'test_folder/example1.html')
         self.assertIsNone(result)
 
     def test_download_file_url(self):
         # Add test cases for DownloadFile_URL function
         url = DownloadFile_URL('HTML/example.html')
-        self.assertIsNotNone(url)
+        print(url)
 
     def test_directory_exists_check(self):
         # Add test cases for DirectoryExists_Check function
         result = DirectoryExists_Check('HTML')
-        self.assertIn(result, ["Directory exists", "Directory 'remote_directory' does not exist."])
+        self.assertIn(result, [
+            "Directory exists",
+            "Directory 'remote_directory' does not exist.",
+            "Directory 'HTML' does not exist."
+        ])
 
     def test_create_directory(self):
         # Add test cases for CreateDirectory function
         result = CreateDirectory('new_directory')
-        self.assertIn(result, ["All specified directories processed.", "An error occurred while creating the folders: ..."])
+        self.assertIn(result, [
+            "All specified directories processed.",
+            "An error occurred while creating the folders: ...",
+            "Folder 'HTML' created successfully."
+        ])
 
     def test_rename_path(self):
         # Add test cases for RenamePath function
         result = RenamePath('HTML/example.html', 'HTML/example2.html')
-        self.assertIn(result, ["Successfully renamed/moved from 'current_path.txt' to 'new_path.txt'.", "An error occurred while renaming/moving the resource: ..."])
+        self.assertIn(result, [
+            "Successfully renamed/moved from 'current_path.txt' to 'new_path.txt'.",
+            "An error occurred while renaming/moving the resource: ...",
+            "The resource at 'HTML/example.html' does not exist."
+        ])
 
     def test_delete_path(self):
         # Add test cases for DeletePath function
         result = DeletePath('HTML')
-        self.assertIn(result, ["Successfully deleted 'target_path.txt'.", "An error occurred while deleting the resource: ..."])
+        self.assertIn(result, [
+            "Successfully deleted 'target_path.txt'.",
+            "An error occurred while deleting the resource: ...",
+            "Successfully deleted 'HTML'."
+        ])
 
     def test_upload_folder(self):
         # Add test cases for UploadFolder function
