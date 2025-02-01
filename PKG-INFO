@@ -1,0 +1,14 @@
+Metadata-Version: 1.0
+Name: pyNextcloud
+Version: 1.0
+Summary: A Python library for interacting with Nextcloud via WebDAV
+Home-page: 
+Author: Mahir Shah
+Author-email: dev@mahirshah.dev
+License: MIT
+Description: A Python library for interacting with Nextcloud via WebDAV.
+Platform: any
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent

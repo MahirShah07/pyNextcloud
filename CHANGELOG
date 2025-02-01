@@ -1,0 +1,16 @@
+# Changelog
+
+## [1.0.0] - 2023-10-01
+### Added
+- Initial release of pyNextcloud.
+- Implemented file upload and download functions.
+- Added directory existence check and creation functions.
+- Implemented file and directory rename and delete functions.
+- Added folder upload functionality.
+- Configuration using environment variables and .env file.
+
+### Fixed
+- Removed few bugs related to file upload and download.
+
+### Changed
+- Updated README with configuration instructions.
